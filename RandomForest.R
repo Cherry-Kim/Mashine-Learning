@@ -13,7 +13,7 @@ RFE <- function(){
         # Import the dataset
         data <- read.csv('Top100_input.csv', header = TRUE)
         head(data[1:4])
-        #   Group.1 class feature1 geature2
+        #   Group.1 class feature1 feature2
         #1 sample1     1           20.175468                 17.53386  
         #11 sample2     0           20.175468                 17.53386 
         
