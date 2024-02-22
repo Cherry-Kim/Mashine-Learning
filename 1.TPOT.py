@@ -11,7 +11,7 @@ tpot_data = pd.read_csv("sig_class.csv")  #[115 rows x 402 columns]
 
 features = tpot_data.drop(['Group.1','class'], axis=1)
 labels = np.unique(tpot_data['class'])  #[0 1]
-print(labels)
+
 X_train, X_test, y_train, y_test = train_test_split(features, tpot_data['class'])
 print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
