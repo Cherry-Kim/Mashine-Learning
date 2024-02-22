@@ -12,9 +12,8 @@ tpot_data = pd.read_csv("sig_class.csv")  #[115 rows x 402 columns]
 features = tpot_data.drop(['Group.1','class'], axis=1)
 labels = np.unique(tpot_data['class'])  #[0 1]
 print(labels)
-X_train, X_test, y_train, y_test = train_test_split(features, tpot_data['class'], train_size=0.75, test_size=0.25)
+X_train, X_test, y_train, y_test = train_test_split(features, tpot_data['class'])
 print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-#(86, 400) (29, 400) (86,) (29,)
 
 tpot = TPOTClassifier(generations=20, population_size=20, verbosity=2,cv=3, n_jobs=4)
 tpot.fit(X_train, y_train)
