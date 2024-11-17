@@ -12,7 +12,7 @@ replace_na_with_median <- function(row) {
 
 numeric_data <- t(apply(numeric_data, 1, replace_na_with_median))
 
-data[,-c(1:2)] <- numeric_data
+data[,-c(1)] <- numeric_data
 
 N <- read.table("N.txt", header = TRUE, sep = "\t")
 head(N[1:5,1:5])
